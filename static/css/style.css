@@ -1,0 +1,249 @@
+:root {
+  --lavender: #CBA0FF;
+  --cyan: #7FDBFF;
+  --pink: #FFABCA;
+  --peach: #FFC9A3;
+  --charcoal: #1B1B1F;
+  --mint: #A8FFE2;
+  --smokepurple: #2C243A;
+  --yellow: #FFF68F;
+  --base: var(--smokepurple);
+  --text-primary: #E0E0E0;
+  --accent-secondary: var(--cyan);
+  --glow-color: var(--mint);
+  --red: var(--pink);
+  --teal: #315050;
+
+}
+
+
+body {
+  background: linear-gradient(135deg,
+      var(--smokepurple),
+      #2E273B,
+      /* slightly lighter smoky purple */
+      #342C46,
+      /* soft dusky purple */
+      #3A3150,
+      /* muted deep violet hint */
+      #42385B
+      /* subtle dark accent for depth */
+    );
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  background-attachment: fixed;
+  line-height: 1.7;
+  min-height: 100vh;
+  min-width: 98vw;
+  transition: all 0.3 ease;
+  padding-bottom: 80px;
+}
+
+a {
+  color: var(--text-primary);
+}
+
+
+main section a {
+  position: relative;
+  display: inline-block;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 400;
+  padding: 16px 20px;
+  border-radius: 20px;
+  overflow: visible;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+main section a:hover {
+  animation: glitchEffect 0.3s;
+  text-shadow: 0 0 8px currentColor;
+}
+
+@keyframes glitchEffect {
+
+  0%,
+  100% {
+    text-shadow: 0 0 0 transparent;
+  }
+
+  20% {
+    text-shadow: -2px -2px 0 var(--pink), 2px 2px 0 var(--cyan);
+  }
+
+  40% {
+    text-shadow: 2px -2px 0 var(--red), -2px 2px 0 var(--cyan);
+  }
+
+  60% {
+    text-shadow: -2px 2px 0 var(--red), 2px -2px 0 var(--cyan);
+  }
+
+  80% {
+    text-shadow: 2px 2px 0 var(--red), -2px -2px 0 var(--cyan);
+  }
+}
+
+
+section {
+  background: rgba(44, 36, 58, 0.95);
+  /* almost opaque */
+  border: 1px solid var(--lavender);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(207, 160, 255, 0.15);
+  box-sizing: border-box;
+  margin: 2rem auto;
+}
+
+
+header {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  background: linear-gradient(135deg,
+      var(--smokepurple),
+      #2E273B);
+  border-bottom: 1px solid var(--mint);
+  box-shadow: 0 0 20px rgba(207, 160, 255, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+}
+
+header h1 {
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button a {
+  box-sizing: border-box;
+}
+
+/* From Uiverse.io by namecho */
+button,
+button::after {
+  padding: 16px 20px;
+  font-size: 18px;
+  background: linear-gradient(45deg, transparent 5%, var(--pink) 5%);
+  border: 0;
+  color: var(--text-primary);
+  letter-spacing: 3px;
+  line-height: 1;
+  box-shadow: 6px 0px 0px var(--cyan);
+  outline: transparent;
+  position: relative;
+}
+
+button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "HOVER ME";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, var(--cyan) 3%, var(--cyan) 5%, var(--pink) 5%);
+  text-shadow: -3px -3px 0px var(--yellow), 3px 3px 0px var(--cyan);
+  clip-path: var(--slice-0);
+}
+
+button:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+
+h2 {
+  padding: 16px 20px;
+  box-shadow: 6px 0px 0px var(--cyan);
+  background: linear-gradient(45deg, transparent 5%, var(--lavender) 5%);
+  width: 10%;
+}
+
+h2:hover {
+  animation: glitchEffect 0.3s;
+  text-shadow: 0 0 8px currentColor;
+}

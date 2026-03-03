@@ -20,6 +20,7 @@ Renders a menu for the given menu ID.
 
 {{- define "_partials/inline/menu/walk.html" }}
   {{- $page := .page }}
+  <div class="button-container">
   {{- range .menuEntries }}
     {{- $attrs := dict "href" .URL }}
     {{- if $page.IsMenuCurrent .Menu . }}
@@ -33,7 +34,8 @@ Renders a menu for the given menu ID.
         {{- $name = . }}
       {{- end }}
     {{- end }}
-    <li>
+    <!-- <li> -->
+    <button>
       <a
         {{- range $k, $v := $attrs }}
           {{- with $v }}
@@ -46,6 +48,8 @@ Renders a menu for the given menu ID.
           {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
         </ul>
       {{- end }}
-    </li>
+  </button>
+    <!-- </li> -->
   {{- end }}
+  </div>
 {{- end }}

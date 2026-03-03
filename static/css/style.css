@@ -254,7 +254,6 @@ h2 {
   padding: 16px 20px;
   box-shadow: 6px 0px 0px var(--cyan);
   background: linear-gradient(45deg, transparent 5%, var(--lavender) 5%);
-  width: fit-content;
 }
 
 h2:hover {
@@ -262,6 +261,9 @@ h2:hover {
   text-shadow: 0 0 8px currentColor;
 }
 
+section h2 {
+  width: fit-content;
+}
 
 footer {
   background: rgba(44, 36, 58, 0.95);

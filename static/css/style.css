@@ -678,7 +678,7 @@ h2 {
   max-height: calc(100vh - 140px);
   overflow-y: auto;
   z-index: 100;
-  min-height: 100vh;
+  min-height: fit-content;
   scale: 90%;
   right: 10px;
 }

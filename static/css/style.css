@@ -427,7 +427,7 @@ footer {
 
 /* articles */
 
-.article {
+/*.article {
   background: linear-gradient(135deg,
       var(--smokepurple),
       #2E273B);
@@ -443,8 +443,6 @@ footer {
   display: flex;
   flex-direction: column;
 }
-
-/* CRT scanlines */
 .article::before {
   content: '';
   position: absolute;
@@ -463,7 +461,6 @@ footer {
   z-index: 2;
 }
 
-/* CRT curve effect */
 .article::after {
   content: '';
   position: absolute;
@@ -480,7 +477,7 @@ footer {
 .article * {
   position: relative;
   z-index: 3;
-  animation-duration: 0.03s;
+  animation-duration: 0.005s;
   animation-name: crtflicker;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -528,7 +525,6 @@ footer {
   text-shadow: 0 0 10px var(--mint);
 }
 
-/* CRT effect for images */
 .article img {
   max-width: 100%;
   border: 2px solid var(--peach);
@@ -541,7 +537,6 @@ footer {
   display: block;
 }
 
-/* Scanlines for images */
 .article img::before {
   content: '';
   position: absolute;
@@ -560,7 +555,6 @@ footer {
   z-index: 10;
 }
 
-/* CRT curve for images */
 .article img::after {
   content: '';
   position: absolute;
@@ -574,7 +568,6 @@ footer {
   z-index: 10;
 }
 
-/* Text flicker animation */
 @keyframes crtflicker {
   0% {
     text-shadow:
@@ -603,7 +596,7 @@ footer {
 .article .button-container {
   left: 0;
 }
-
+*/
 .article button {
   display: inline-flex;
   align-items: center;

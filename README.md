@@ -40,6 +40,10 @@ hackthebox = ''
 
 ```
 
+## Tips
+
+* for cover images set "cover" in the top of the post and set it to the url like: `/posts/something/image.png`
+
 ## Screenshots
 
 ![](./screenshots/home.png)

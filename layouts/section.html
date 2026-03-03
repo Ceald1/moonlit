@@ -4,7 +4,10 @@
   {{ range .Pages }}
     <section>
       <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      {{ .Summary }}
+      <!-- {{ .Summary }} -->
+  {{ if .Params.cover }}
+  <img src="{{ .Params.cover }}" alt="{{ .Title }}" class="preview-cover">
+{{ end }}
     </section>
   {{ end }}
 {{ end }}

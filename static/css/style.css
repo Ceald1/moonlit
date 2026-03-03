@@ -417,3 +417,181 @@ footer {
     text-shadow: 0 0 8px currentColor;
   }
 }
+
+
+
+
+/* articles */
+
+/* articles */
+
+.article {
+  background: linear-gradient(135deg,
+      var(--smokepurple),
+      #2E273B);
+  border: 2px solid var(--text-primary);
+  padding: 2rem;
+  position: relative;
+  box-shadow:
+    inset 0 0 30px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(255, 246, 143, 0.2);
+  border-radius: 4px;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* CRT scanlines */
+.article::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px);
+  border-radius: 4px;
+  z-index: 2;
+}
+
+/* CRT curve effect */
+.article::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.article * {
+  position: relative;
+  z-index: 3;
+  animation-duration: 0.03s;
+  animation-name: crtflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.article h1 {
+  font-family: 'Orbitron', monospace;
+  color: var(--cyan);
+  text-shadow:
+    1px 0 0 var(--pink),
+    -2px 0 0 var(--mint),
+    0 0 10px rgba(127, 219, 255, 0.5);
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+.article h2 {
+  font-family: 'Orbitron', monospace;
+  color: var(--mint);
+  text-shadow:
+    1px 0 0 var(--pink),
+    -1px 0 0 var(--cyan),
+    0 0 8px rgba(168, 255, 226, 0.5);
+  letter-spacing: 1px;
+}
+
+.article h3 {
+  font-family: 'Orbitron', monospace;
+  color: var(--lavender);
+  text-shadow: 0 0 6px rgba(203, 160, 255, 0.4);
+}
+
+.article p {
+  font-family: 'Courier New', monospace;
+  color: var(--text-primary);
+}
+
+.article a {
+  color: var(--cyan);
+  text-shadow: 0 0 5px rgba(127, 219, 255, 0.6);
+}
+
+.article a:hover {
+  color: var(--mint);
+  text-shadow: 0 0 10px var(--mint);
+}
+
+/* CRT effect for images */
+.article img {
+  max-width: 100%;
+  border: 2px solid var(--peach);
+  border-radius: 2px;
+  margin: 1.5rem 0;
+  box-shadow:
+    inset 0 0 20px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(255, 246, 143, 0.3);
+  position: relative;
+  display: block;
+}
+
+/* Scanlines for images */
+.article img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 1px,
+      transparent 1px,
+      transparent 2px);
+  border-radius: 2px;
+  z-index: 10;
+}
+
+/* CRT curve for images */
+.article img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  border-radius: 2px;
+  z-index: 10;
+}
+
+/* Text flicker animation */
+@keyframes crtflicker {
+  0% {
+    text-shadow:
+      0.5px 0 0 var(--pink),
+      -1px 0 0 var(--mint),
+      0 0 4px rgba(255, 246, 143, 0.3);
+    opacity: 0.95;
+  }
+
+  50% {
+    text-shadow:
+      1px 0.25px 1px var(--pink),
+      -0.5px -0.25px 1px var(--mint),
+      0 0 6px rgba(255, 246, 143, 0.5);
+  }
+
+  100% {
+    text-shadow:
+      0.5px 0 0 var(--pink),
+      -1px 0 0 var(--mint),
+      0 0 4px rgba(255, 246, 143, 0.3);
+    opacity: 1;
+  }
+}

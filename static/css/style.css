@@ -438,6 +438,8 @@ footer {
   border-radius: 4px;
   gap: 8px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* CRT scanlines */
@@ -594,4 +596,33 @@ footer {
       0 0 4px rgba(255, 246, 143, 0.3);
     opacity: 1;
   }
+}
+
+.article .button-container {
+  left: 0;
+}
+
+.article button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  align-self: flex-start;
+  margin-right: 10px;
+  /* space between buttons */
+  margin-bottom: 10px;
+  /* space below buttons */
+}
+
+.article button a {
+  display: contents;
+  /* removes button a wrapper, lets content flow naturally */
+}
+
+.article button i {
+  display: inline;
+  /* overrides flex display */
+  margin: 0;
 }

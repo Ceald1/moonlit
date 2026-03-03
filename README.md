@@ -39,3 +39,8 @@ twitter = ''
 hackthebox = ''
 
 ```
+
+## Screenshots
+
+![](./screenshots/home.png)
+![](./screenshots/post.png)

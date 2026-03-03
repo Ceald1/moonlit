@@ -1,0 +1,137 @@
+/* ============================================================
+   UNIVERSAL MOBILE SCALING — mobile.css
+   Scales all elements proportionally for mobile screens.
+   Just drop this in and it handles the rest.
+   ============================================================ */
+
+/* ── BOX MODEL ──────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ── VIEWPORT META (add this to your HTML <head>) ────────
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   ─────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+
+  /* ── ROOT FONT SIZE ───────────────────────────────────── *
+   * Everything that uses rem/em scales from this one value.
+   * Adjust this single number to scale the whole page up/down.
+   * ─────────────────────────────────────────────────────── */
+  html {
+    font-size: 15px;              /* default browser is 16px */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* ── BODY ────────────────────────────────────────────── */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+    word-break: break-word;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADINGS — fluid scaling with clamp() ────────────── *
+   * clamp(min, preferred, max)
+   * preferred = viewport-relative size (scales with screen)
+   * ─────────────────────────────────────────────────────── */
+  h1 { font-size: clamp(1.6rem,  7vw, 2.5rem); }
+  h2 { font-size: clamp(1.3rem,  5.5vw, 2rem); }
+  h3 { font-size: clamp(1.1rem,  4.5vw, 1.6rem); }
+  h4 { font-size: clamp(1rem,    4vw,   1.3rem); }
+  h5 { font-size: clamp(0.9rem,  3.5vw, 1.1rem); }
+  h6 { font-size: clamp(0.85rem, 3vw,   1rem); }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-block: 0.75em 0.4em;
+  }
+
+  /* ── BODY TEXT ────────────────────────────────────────── */
+  p, li, dt, dd, label, blockquote {
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    line-height: 1.65;
+  }
+
+  small, figcaption, caption {
+    font-size: clamp(0.75rem, 2.8vw, 0.875rem);
+  }
+
+  /* ── IMAGES & MEDIA ───────────────────────────────────── *
+   * All media scales down to fit, never overflows.
+   * ─────────────────────────────────────────────────────── */
+  img, svg, video, canvas, picture, figure {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ── LAYOUT: PREVENT HORIZONTAL OVERFLOW ─────────────── */
+  *,
+  div, section, article, aside,
+  header, footer, main, nav {
+    max-width: 100%;
+  }
+
+  /* ── SPACING: SCALE PADDING/MARGIN WITH VIEWPORT ─────── */
+  section, article, .container, .wrapper, .content {
+    padding-left:  clamp(0.75rem, 4vw, 1.5rem);
+    padding-right: clamp(0.75rem, 4vw, 1.5rem);
+  }
+
+  /* ── BUTTONS & INPUTS ─────────────────────────────────── *
+   * Large enough to tap comfortably (min 44px touch target).
+   * ─────────────────────────────────────────────────────── */
+  button, input, select, textarea,
+  [role="button"], a.button, .btn {
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    min-height: 44px;
+    padding: 0.6em 1.1em;
+    max-width: 100%;
+  }
+
+  /* ── TABLES → HORIZONTALLY SCROLLABLE ────────────────── */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: clamp(0.8rem, 3vw, 0.95rem);
+    width: 100%;
+  }
+
+  /* ── CODE BLOCKS ──────────────────────────────────────── */
+  pre {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: clamp(0.75rem, 2.8vw, 0.9rem);
+    padding: 1rem;
+  }
+
+  code {
+    font-size: 0.9em;
+  }
+
+  /* ── IFRAMES & EMBEDS ─────────────────────────────────── */
+  iframe, embed, object {
+    max-width: 100%;
+  }
+
+  /* Responsive iframe wrapper — use <div class="embed-wrap"> */
+  .embed-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+  }
+  .embed-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

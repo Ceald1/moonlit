@@ -1,5 +1,7 @@
 {{ define "main" }}
 <div class="article">
+  <div class="pageContent">
+  <div class="content">
   <h1>{{ .Title }}</h1>
 <!-- {{ if .Params.cover }}
     <img src="{{ .Params.cover }}" alt="{{ .Title }}" class="article-cover">
@@ -9,6 +11,22 @@
   <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
   {{ .Content }}
+      </div>
+
+<div class="tags">
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    </div>
+    </div>
+
+  
+  <aside class="sidebar">
+{{ if .Params.toc }}
+    <h1>Table Of Contents</h1>
+    <nav class="toc">{{ .TableOfContents }}</nav>
+{{ end }}
+  </aside>
+
+
+
 </div>
 {{ end }}

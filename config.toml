@@ -1,12 +1,4 @@
-# Moonlit
-
-custom hugo theme
-
-cyberpunk and lofi with minimalism
-
-```toml
-
-baseURL = 'https://example.org/'
+baseURL = 'http://localhost:1313'
 languageCode = 'en-US'
 title = 'moonlit'
 
@@ -26,6 +18,7 @@ name = 'Tags'
 pageRef = '/tags'
 weight = 30
 
+
 [module]
 [module.hugoVersion]
 extended = false
@@ -33,9 +26,3 @@ min = '0.146.0'
 
 [params]
 github = "https://github.com/Ceald1"
-linkedin = ''
-email = ''
-twitter = ''
-hackthebox = ''
-
-```

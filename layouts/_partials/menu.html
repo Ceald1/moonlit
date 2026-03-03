@@ -51,5 +51,33 @@ Renders a menu for the given menu ID.
   </button>
     <!-- </li> -->
   {{- end }}
+{{- if site.Params.github }}
+  <button>
+    <a href="{{ site.Params.github }}" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="github"></i>
+      </a>
+    </button>
+  {{- end}}
+  {{- if site.Params.linkedin }}
+  <button>
+    <a href="{{ site.Params.linkedin }}" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="linkedin"></i>
+      </a>
+    </button>
+  {{- end}}
+  {{- if site.Params.hackthebox }}
+ <button>
+    <a href="{{ site.Params.hackthebox }}" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="box"></i>
+      </a>
+    </button>
+  {{- end}}
+  {{- if site.Params.email }}
+ <button>
+    <a href="{{ site.Params.email }}" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="mail"></i>
+      </a>
+    </button>
+  {{- end}}
   </div>
 {{- end }}

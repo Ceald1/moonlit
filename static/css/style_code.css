@@ -23,17 +23,19 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.4rem 0.75rem;
-  background: var(--smokepurple) !important;
+  background: var(--cyan) !important;
   border-bottom: 1px solid var(--border-color);
+  margin: 0;
 }
 
 .code-lang {
   font-size: 0.75rem;
   /*font-family: 'Courier New', monospace; */
-  color: var(--lavender);
+  color: var(--text-primary);
   /* matches your existing lavender variable */
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin: 0;
 }
 
 .code-block pre[class*="language-"] {
@@ -41,6 +43,7 @@
       var(--smokepurple),
       #2E273B) !important;
   text-shadow: none;
+  margin: 0;
 }
 
 .token.keyword {

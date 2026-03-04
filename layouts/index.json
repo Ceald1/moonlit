@@ -1,0 +1,15 @@
+{{- define "index.json" -}}
+{
+  "posts": [
+    {{- range $index, $post := .Site.RegularPages -}}
+    {
+      "title": {{ $post.Title | jsonify }},
+      "url": {{ $post.Permalink | jsonify }},
+      "content": {{ $post.Plain | jsonify }},
+      "date": {{ $post.Date.Format "2006-01-02" | jsonify }},
+      "tags": {{ $post.Params.tags | jsonify }}
+    }{{ if ne $index (sub (len .Site.RegularPages) 1) }},{{ end }}
+    {{- end -}}
+  ]
+}
+{{- end -}}

@@ -79,5 +79,31 @@ Renders a menu for the given menu ID.
       </a>
     </button>
   {{- end}}
+
+<div class="search-container">
+  <label for="search-input" class="search-label">SEARCH</label>
+  <div class="search-input-wrapper">
+    <span class="corner corner-tl"></span>
+    <span class="corner corner-tr"></span>
+    <span class="corner corner-bl"></span>
+    <span class="corner corner-br"></span>
+    
+    <input
+      id="search-input"
+      type="text"
+      class="search-input"
+      placeholder="> search posts..."
+      autocomplete="off"
+    />
   </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+<script src="/js/main.js"></script>
+
+
+  </div>
+
+
+
 {{- end }}

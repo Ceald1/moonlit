@@ -1,0 +1,136 @@
+@import url('./colors.css');
+
+
+.search-container {
+  position: absolute;
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem 0;
+  right: 0;
+}
+
+.search-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--cp-cyan);
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.corner {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--cp-cyan);
+  opacity: 0.4;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.corner-tl {
+  top: -0.5rem;
+  left: -0.5rem;
+  border-right: none;
+  border-bottom: none;
+}
+
+.corner-tr {
+  top: -0.5rem;
+  right: -0.5rem;
+  border-left: none;
+  border-bottom: none;
+}
+
+.corner-bl {
+  bottom: -0.5rem;
+  left: -0.5rem;
+  border-right: none;
+  border-top: none;
+}
+
+.corner-br {
+  bottom: -0.5rem;
+  right: -0.5rem;
+  border-left: none;
+  border-top: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--cp-cyan);
+  color: var(--text-primary);
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  outline: none;
+  clip-path: polygon(0 4px, 4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: var(--cp-cyan);
+  box-shadow: 0 0 15px rgba(125, 211, 252, 0.2), inset 0 0 20px rgba(125, 211, 252, 0.05);
+  opacity: 1;
+}
+
+.search-input:focus~.corner {
+  opacity: 1;
+  border-color: var(--cp-cyan);
+}
+
+.search-results {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--cp-cyan);
+  border-radius: 4px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 100;
+  display: none;
+}
+
+.search-results:not(:empty) {
+  display: block;
+}
+
+.search-result-item {
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-light);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: background-color 0.2s ease;
+}
+
+.search-result-item:hover {
+  background-color: var(--bg-hover);
+}
+
+.result-title {
+  font-weight: bold;
+  color: var(--cp-cyan);
+  margin-bottom: 0.25rem;
+}
+
+.result-preview {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.result-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

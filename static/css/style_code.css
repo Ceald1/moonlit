@@ -14,8 +14,9 @@
   --red: var(--pink);
   --teal: #315050;
   --glow_num: 2px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Orbitron', monospace;
   line-height: 1.7;
+  letter-spacing: 1px;
 }
 
 .code-header {
@@ -23,15 +24,18 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.4rem 0.75rem;
+  font-weight: 0;
   background: var(--cyan) !important;
   border-bottom: 1px solid var(--border-color);
   margin: 0;
+  color: var(--smokepurple);
 }
 
 .code-lang {
-  font-size: 0.75rem;
+  /* font-size: 0.75rem; */
   /*font-family: 'Courier New', monospace; */
-  color: var(--text-primary);
+  color: var(--smokepurple);
+  padding: 16px 20px;
   /* matches your existing lavender variable */
   text-transform: uppercase;
   letter-spacing: 1px;

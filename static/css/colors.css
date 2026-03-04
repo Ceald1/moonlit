@@ -1,0 +1,52 @@
+:root {
+
+
+  --cyan: #89b4fa;
+  --magenta: #cba6f7;
+  --purple: #b4befe;
+  --pink: #f5c2e7;
+
+  /* Secondary Colors - Muted pastels */
+  --teal: #5eead4;
+  --lime: #a6e3a1;
+  --orange: #fed7aa;
+
+  /* Backgrounds - Soft dark tones */
+  --bg-primary: #11111b;
+  /*#0d0811;*/
+  --bg-secondary: #181825;
+  /*#1a1220;*/
+  --bg-tertiary: #1e1e2e;
+  /*#231829;*/
+  --bg-hover: #313244;
+  /*#2d1f35;*/
+
+  /* Text Colors */
+  --text-primary: #e8dff0;
+  --text-secondary: #d1c4dd;
+  --text-muted: #a89baf;
+
+  /* Utility Colors */
+  --success: #5eead4;
+  --error: #f472b6;
+  --warning: #fed7aa;
+  --info: #d8b4fe;
+
+  /* Borders & Accents */
+  --border-light: #45475a;
+  --border-soft: #585b70;
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --shadow-soft: 0 0 15px rgba(125, 211, 252, 0.15);
+  --shadow-pink: 0 0 15px rgba(244, 114, 182, 0.15);
+  --smokepurple: var(--bg-primary);
+  --lavender: var(--purple);
+  --yellow: #f9e2af;
+  /*#fef08a; */
+
+  --mint: #94e2d5;
+
+  --red: #f38ba8;
+  /*#fca5a5;*/
+  --sapphire: #74c7ec;
+  --peach: #fab387;
+}

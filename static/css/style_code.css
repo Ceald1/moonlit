@@ -1,18 +1,7 @@
+@import url('./colors.css');
+
 :root {
-  --lavender: #CBA0FF;
-  --cyan: #7FDBFF;
-  --pink: #FFABCA;
-  --peach: #FFC9A3;
-  --charcoal: #1B1B1F;
-  --mint: #A8FFE2;
-  --smokepurple: #2C243A;
-  --yellow: #FFF68F;
-  --base: var(--smokepurple);
-  --text-primary: #E0E0E0;
-  --accent-secondary: var(--cyan);
-  --glow-color: var(--mint);
-  --red: var(--pink);
-  --teal: #315050;
+
   --glow_num: 2px;
   font-family: 'Orbitron', monospace;
   line-height: 1.7;
@@ -31,24 +20,46 @@
   color: var(--smokepurple);
 }
 
+.code-block {
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  border: 1px solid var(--cyan);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 .code-lang {
-  /* font-size: 0.75rem; */
-  /*font-family: 'Courier New', monospace; */
-  color: var(--smokepurple);
-  padding: 16px 20px;
-  /* matches your existing lavender variable */
+  background: linear-gradient(135deg, #1a1220, #2d1f35);
+  color: var(--text-muted);
+  padding: 12px 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0;
+  border-bottom: 1px solid var(--cyan);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.code-lang::before {
+  color: var(--cyan);
 }
 
 .code-block pre[class*="language-"] {
-  background: linear-gradient(135deg,
-      var(--smokepurple),
-      #2E273B) !important;
+  background: var(--bg-primary) !important;
+  color: var(--text-primary);
   text-shadow: none;
   margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
+
+
 
 .token.keyword {
   color: var(--pink);

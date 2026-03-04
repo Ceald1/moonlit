@@ -1,4 +1,8 @@
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-dark.min.css"> -->
+<link rel="stylesheet" href="{{ "css/style_code.css" | absLangURL }}"> 
 <div class="code-block">
   <div class="code-header">{{ .Type }}</div>  <!-- shows language -->
   <pre><code class="language-{{ .Type }}">{{ .Inner }}</code></pre>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js" defer></script>

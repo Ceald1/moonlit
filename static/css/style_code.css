@@ -1,0 +1,137 @@
+:root {
+  --lavender: #CBA0FF;
+  --cyan: #7FDBFF;
+  --pink: #FFABCA;
+  --peach: #FFC9A3;
+  --charcoal: #1B1B1F;
+  --mint: #A8FFE2;
+  --smokepurple: #2C243A;
+  --yellow: #FFF68F;
+  --base: var(--smokepurple);
+  --text-primary: #E0E0E0;
+  --accent-secondary: var(--cyan);
+  --glow-color: var(--mint);
+  --red: var(--pink);
+  --teal: #315050;
+  --glow_num: 2px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.75rem;
+  background: var(--smokepurple) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.code-lang {
+  font-size: 0.75rem;
+  /*font-family: 'Courier New', monospace; */
+  color: var(--lavender);
+  /* matches your existing lavender variable */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.code-block pre[class*="language-"] {
+  background: linear-gradient(135deg,
+      var(--smokepurple),
+      #2E273B) !important;
+  text-shadow: none;
+}
+
+.token.keyword {
+  color: var(--pink);
+  text-shadow: 0 0 var(--glow_num) var(--pink);
+}
+
+.token.string {
+  color: var(--mint);
+  text-shadow: 0 0 var(--glow_num) var(--mint);
+}
+
+.token.comment {
+  color: var(--teal);
+  font-style: italic;
+}
+
+/* no glow on comments */
+.token.function {
+  color: var(--lavender);
+  text-shadow: 0 0 var(--glow_num) var(--lavender);
+}
+
+.token.number {
+  color: var(--peach);
+  text-shadow: 0 0 var(--glow_num) var(--peach);
+}
+
+.token.operator {
+  color: var(--cyan);
+  text-shadow: 0 0 var(--glow_num) var(--cyan);
+}
+
+.token.punctuation {
+  color: #554d6b;
+}
+
+/* no glow */
+.token.class-name {
+  color: var(--yellow);
+  text-shadow: 0 0 var(--glow_num) var(--yellow);
+}
+
+.token.boolean {
+  color: var(--pink);
+  text-shadow: 0 0 var(--glow_num) var(--pink);
+}
+
+.token.variable {
+  color: var(--text-primary);
+}
+
+/* no glow */
+.token.builtin {
+  color: var(--cyan);
+  text-shadow: 0 0 var(--glow_num) var(--cyan);
+}
+
+.token.parameter {
+  color: var(--peach);
+  text-shadow: 0 0 var(--glow_num) var(--peach);
+}
+
+.token.property {
+  color: var(--lavender);
+  text-shadow: 0 0 var(--glow_num) var(--lavender);
+}
+
+.token.important {
+  color: var(--cyan);
+  text-shadow: 0 0 var(--glow_num) var(--cyan);
+}
+
+.token.macro {
+  color: var(--cyan);
+  text-shadow: 0 0 var(--glow_num) var(--cyan);
+}
+
+.token.directive {
+  color: var(--pink);
+  text-shadow: 0 0 var(--glow_num) var(--pink);
+}
+
+.token.directive-hash {
+  color: var(--pink);
+  text-shadow: 0 0 var(--glow_num) var(--pink);
+}
+
+.token.file {
+  color: var(--mint);
+  text-shadow: 0 0 var(--glow_num) var(--mint);
+}
+
+/* the filename in <> or "" */

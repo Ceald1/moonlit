@@ -685,6 +685,9 @@ h2 {
 
 .sidebar h1 {
   background: none !important;
+  border-color: none !important;
+  border: 0;
+  box-shadow: 0;
 }
 
 .sidebar a {
@@ -695,11 +698,13 @@ h2 {
   transition: background-color 0.2s ease;
   text-decoration: none;
   color: var(--cyan);
+  border-color: none;
 }
 
 .sidebar a:hover {
   background-color: var(--yellow);
 }
+
 
 .toc {
   display: flex;

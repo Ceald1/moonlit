@@ -586,6 +586,13 @@ footer {
   z-index: 10;
 }
 
+.preview-cover {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 @keyframes crtflicker {
   0% {
     text-shadow:

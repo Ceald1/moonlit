@@ -540,7 +540,8 @@ footer {
   text-shadow: 0 0 10px var(--mint);
 }
 
-.article img {
+.article img,
+.preview-cover {
   max-width: 100%;
   border: 2px solid var(--orange);
   border-radius: 2px;
@@ -552,7 +553,8 @@ footer {
   display: block;
 }
 
-.article img::before {
+.article img::before,
+.preview-cover {
   content: '';
   position: absolute;
   top: 0;
@@ -570,7 +572,8 @@ footer {
   z-index: 10;
 }
 
-.article img::after {
+.article img::after,
+.preview-cover {
   content: '';
   position: absolute;
   top: 0;

@@ -2,11 +2,10 @@
 
 
 .search-container {
-  position: absolute;
+  position: relative;
   width: 100%;
   max-width: 500px;
   margin: 1rem 0;
-  right: 0;
 }
 
 .search-label {
@@ -15,7 +14,7 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--cp-cyan);
+  color: var(--cyan);
   margin-bottom: 0.5rem;
   transition: all 0.3s ease;
 }
@@ -28,7 +27,7 @@
   position: absolute;
   width: 1rem;
   height: 1rem;
-  border: 2px solid var(--cp-cyan);
+  border: 2px solid var(--cyan);
   opacity: 0.4;
   transition: all 0.3s ease;
   pointer-events: none;
@@ -67,7 +66,7 @@
   width: 100%;
   padding: 0.75rem 1rem;
   background-color: var(--bg-tertiary);
-  border: 1px solid var(--cp-cyan);
+  border: 1px solid var(--cyan);
   color: var(--text-primary);
   font-family: 'Courier New', monospace;
   font-size: 1rem;
@@ -77,14 +76,14 @@
 }
 
 .search-input:focus {
-  border-color: var(--cp-cyan);
+  border-color: var(--cyan);
   box-shadow: 0 0 15px rgba(125, 211, 252, 0.2), inset 0 0 20px rgba(125, 211, 252, 0.05);
   opacity: 1;
 }
 
 .search-input:focus~.corner {
   opacity: 1;
-  border-color: var(--cp-cyan);
+  border-color: var(--cyan);
 }
 
 .search-results {
@@ -93,7 +92,7 @@
   left: 0;
   right: 0;
   background-color: var(--bg-secondary);
-  border: 1px solid var(--cp-cyan);
+  border: 1px solid var(--cyan);
   border-radius: 4px;
   max-height: 400px;
   overflow-y: auto;
@@ -120,7 +119,7 @@
 
 .result-title {
   font-weight: bold;
-  color: var(--cp-cyan);
+  color: var(--cyan);
   margin-bottom: 0.25rem;
 }
 
@@ -133,4 +132,42 @@
 .result-date {
   font-size: 0.75rem;
   color: var(--text-muted);
+}
+
+
+/* Desktop: Right sidebar */
+@media (min-width: 1024px) {
+  .search-container {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Mobile: Full width, smaller */
+@media (max-width: 1023px) {
+  .search-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .search-input {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .search-label {
+    font-size: 0.7rem;
+  }
+
+  .corner {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-width: 1.5px;
+  }
+
+  .search-results {
+    max-height: 300px;
+  }
 }

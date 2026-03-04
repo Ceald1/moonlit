@@ -685,9 +685,9 @@ h2 {
 
 .sidebar h1 {
   background: none !important;
-  border-color: none !important;
+  border-color: transparent !important;
   border: 0;
-  box-shadow: 0;
+  box-shadow: none !important;
 }
 
 .sidebar a {

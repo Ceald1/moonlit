@@ -543,7 +543,8 @@ footer {
   text-shadow: 0 0 10px var(--mint);
 }
 
-.article img {
+.article img,
+img {
   max-width: 100%;
   border: 2px solid var(--peach);
   border-radius: 2px;

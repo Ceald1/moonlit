@@ -1,4 +1,4 @@
-:root {
+/*:root {
   --lavender: #CBA0FF;
   --cyan: #7FDBFF;
   --pink: #FFABCA;
@@ -15,7 +15,8 @@
   --teal: #315050;
   font-family: 'Inter', sans-serif;
   line-height: 1.7;
-}
+} */
+@import url("colors.css");
 
 
 body {
@@ -60,7 +61,7 @@ main section a {
 
 main section a:hover {
   animation: glitchEffect 0.3s;
-  text-shadow: 0 0 8px currentColor;
+  text-shadow: 0 0 8px var(--text-secondary);
 }
 
 @keyframes glitchEffect {
@@ -136,6 +137,10 @@ header h1 {
   margin-top: 10px;
   width: 100%;
   box-sizing: border-box;
+
+  flex-wrap: wrap;
+
+  margin-top: 8px;
 }
 
 button a {
@@ -280,6 +285,7 @@ footer {
   margin: 0;
   width: 100%;
   flex-shrink: 0;
+  border-radius: 8px;
   /* prevents footer from shrinking */
 }
 
@@ -303,9 +309,7 @@ footer {
   }
 
   .button-container {
-    flex-wrap: wrap;
     gap: 10px;
-    margin-top: 8px;
   }
 
   button,
@@ -682,6 +686,7 @@ h2 {
   min-height: fit-content;
   scale: 90%;
   right: 10px;
+  border-radius: 8px;
 }
 
 .sidebar h1 {
@@ -704,6 +709,7 @@ h2 {
 
 .sidebar a:hover {
   background-color: var(--yellow);
+  color: var(--overlay0);
 }
 
 

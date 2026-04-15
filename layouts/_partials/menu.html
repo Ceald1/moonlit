@@ -1,3 +1,4 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 {{- /*
 Renders a menu for the given menu ID.
 
@@ -54,14 +55,14 @@ Renders a menu for the given menu ID.
 {{- if site.Params.github }}
   <button>
     <a href="{{ site.Params.github }}" target="_blank" rel="noopener noreferrer">
-        <i data-lucide="github"></i>
+        <i class="fa-brands fa-github"></i>
       </a>
     </button>
   {{- end}}
   {{- if site.Params.linkedin }}
   <button>
     <a href="{{ site.Params.linkedin }}" target="_blank" rel="noopener noreferrer">
-        <i data-lucide="linkedin"></i>
+        <i class="fa-brands fa-linkedin"></i>
       </a>
     </button>
   {{- end}}

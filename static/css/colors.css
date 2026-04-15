@@ -21,10 +21,14 @@
   --bg-hover: #313244;
   /*#2d1f35;*/
 
-  /* Text Colors */
-  --text-primary: #cdd6f4;
-  --text-secondary: #bac2de;
-  --text-muted: #a6adc8;
+
+/* Text Colors - balanced pop */
+--text-primary: #d0d5f0;     /* clearer, but not neon */
+--text-secondary: #b4b9d6;   /* noticeable step down */
+--text-muted: #8f94ad;       /* still visible, not washed */
+
+/* Optional */
+--text-subtle: #6f748e;
 
   /* Utility Colors */
   --success: #5eead4;

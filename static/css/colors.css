@@ -23,9 +23,15 @@
 
 
 /* Text Colors - balanced pop */
---text-primary: #d0d5f0;     /* clearer, but not neon */
---text-secondary: #b4b9d6;   /* noticeable step down */
---text-muted: #8f94ad;       /* still visible, not washed */
+/*--text-primary: #d0d5f0;      clearer, but not neon */
+/*--text-secondary: #b4b9d6;    noticeable step down */
+/*--text-muted: #8f94ad;        still visible, not washed */
+/* Text Colors - balanced pop (recommended) */
+--text-primary: #e2e6ff;     /* crisp, noticeable, not glowing */
+--text-secondary: #b8bddf;   /* clear hierarchy drop */
+--text-muted: #8c91ad;       /* soft but still readable */
+
+
 
 /* Optional */
 --text-subtle: #6f748e;
